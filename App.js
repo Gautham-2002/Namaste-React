@@ -12,6 +12,9 @@ const JsxHeading2 = () => <h1 id="heading">Namste React using jsx 🚀 </h1>;
 const HeadingComponent = () => (
   <div className="container">
     <JsxHeading2 />
+    <h2>{100 + 200}</h2>
+    {jsxHeading}
+    {JsxHeading2()}
     <h1 className="Heading">Namaste React Functional Component</h1>
   </div>
 );
