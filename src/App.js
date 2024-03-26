@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
+import RestaurantMenu from "./components/RestaurantMenu";
 
 const AppLayout = () => {
   return (
@@ -16,7 +17,7 @@ const AppLayout = () => {
   );
 };
 
-// createBrowserRouter  creates the router object that will be used to navigate through pages. It is used for configurating
+// createBrowserRouter  creates the router object that will be used to navigate through pages. It is used for router configurating
 const appRoute = createBrowserRouter([
   {
     path: "/",
@@ -33,6 +34,10 @@ const appRoute = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
+      },
+      {
+        path: "/restaurants/:resId", // colon indicates dynamic part
+        element: <RestaurantMenu />,
       },
     ],
     errorElement: <Error />,
